@@ -1,0 +1,151 @@
+html {
+	font-size: 16px;
+}
+
+:root {
+	--cyan: hsl(179, 62%, 43%);
+	--bright-yellow: hsl(71, 73%, 54%);
+	--light-gray: hsl(204, 43%, 93%);
+	--grayish-blue: hsl(218, 22%, 67%);
+}
+
+/*Start The Project*/
+body {
+	font-family: "Karla", sans-serif;
+	background-color: var(--light-gray);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+main {
+	width: 40%;
+	display: grid;
+	grid-template: repeat(2, auto) / repeat(2, 1fr);
+}
+
+main section {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	row-gap: 15px;
+	padding: 20px 20px;
+}
+
+/*Join Section*/
+
+main section.join-section {
+	grid-area: 1 / 1 / 2 / 3;
+	background-color: #fff;
+	border-radius: 10px 10px 0px 0px;	
+}
+
+main section.join-section h1 {
+	color: var(--cyan);
+	font-size: 1.7rem;
+}
+
+main section.join-section h2 {
+	color: var(--bright-yellow);
+	font-size: 1.3rem;
+} 
+
+main section.join-section p {
+	color: var(--grayish-blue);
+	font-size: 1rem;
+}
+
+/*Subs Section*/
+
+main section.subs-section {
+	background-color: var(--cyan);
+	border-radius: 0px 0px 0px 10px;	
+	padding-bottom: 20px;
+}
+
+main section.subs-section h2 {
+	color: #fff;
+	font-size: 1.3rem;
+} 
+
+main section.subs-section p {
+	color: var(--light-gray);
+	font-size: 1rem;
+	display: flex;
+	align-items: center;
+	column-gap: 10px;
+}
+
+main section.subs-section p.offer {
+	color: #fff;
+	font-size: 1rem;
+}
+
+main section.subs-section p span.price {
+	color: #fff;
+	font-size: 2rem;
+	font-weight: 700;
+}
+
+main section.subs-section button {
+	background-color: var(--bright-yellow);
+    color: #fff;
+	width: 100%;
+	border: none;
+	border-radius: 5px;
+	padding: 10px 20px;
+	margin-top: 10px;
+	font-weight: 700;
+	transition: 0.5s ease all;
+}
+
+main section.subs-section button:hover {
+	color: var(--bright-yellow);
+	background-color: #fff;
+}
+
+/*Why Us Section */
+
+main section.why-us-section {
+	background-color: #4ABEBD;
+	border-radius: 0px 0px 10px 0px;
+}
+
+main section.why-us-section h2 {
+	color: #fff;
+	font-size: 1.3rem;
+} 
+
+main section.why-us-section pre {
+	color: var(--light-gray);
+	font-size: 0.9rem;
+	font-family: "Karla", sans-serif;
+}
+
+@media (max-width: 760px) {
+	main {
+		width: 80%;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		padding: 20px 0px;
+	}
+
+	main section {
+		width: 100%;
+	}
+
+	main section.join-section {
+		border-radius: 10px 10px 0px 0px !important;
+	}
+
+	main section.subs-section {
+		border-radius: 0px !important;
+	}
+
+	main section.why-us-section {
+		border-radius: 0px 0px 10px 10px !important;
+	}
+}
